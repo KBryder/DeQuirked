@@ -3,7 +3,8 @@
   "tags": ["AH", "AM", "Arcjec"],
   "description": "Arcjec: prefix XDXD, otherwise plain.",
   "rules": [
-    ["(?i)^@TAGxdxd\\s*", "\\1"]
+    ["(?i)^@TAGxdxd\\s*", "\\1"],
+    ["\\s*\\xdxd\\s*$", ""]
   ],
   "postprocessors": ["collapse_whitespace", "nfkc"]
 }
