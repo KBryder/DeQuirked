@@ -1,0 +1,10 @@
+{
+  "name": "nepeta",
+  "tags": ["AC", "Nepeta"],
+  "description": "Nepeta: prefix “:33 < ”, 33→ee.",
+  "rules": [
+    ["^@TAG:?33\\s*<\\s*", "\\1"],
+    ["33", "ee"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

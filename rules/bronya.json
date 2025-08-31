@@ -1,0 +1,10 @@
+{
+  "name": "bronya",
+  "tags": ["Bronya"],
+  "description": "Bronya: excited vV ... Vv wrappers.",
+  "rules": [
+    ["^@TAGvV\\s*", "\\1"],
+    ["\\s*Vv\\s*$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

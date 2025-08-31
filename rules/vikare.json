@@ -1,0 +1,10 @@
+{
+  "name": "vikare",
+  "tags": ["Vikare"],
+  "description": "Vikare: ~tildes~ wrapper.",
+  "rules": [
+    ["^@TAG~\\s*", "\\1"],
+    ["\\s*~\\s*$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

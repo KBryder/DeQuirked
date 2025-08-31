@@ -1,0 +1,12 @@
+{
+  "name": "tyzias",
+  "tags": ["Tyzias"],
+  "description": "Tyzias: mmmm→m, wwww→w.",
+  "rules": [
+    ["m{4,}", "m"],
+    ["w{4,}", "w"],
+    ["M{4,}", "M"],
+    ["W{4,}", "W"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

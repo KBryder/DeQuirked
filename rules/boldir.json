@@ -1,0 +1,10 @@
+{
+  "name": "boldir",
+  "tags": ["Boldir"],
+  "description": "Boldir: surrounds text with parentheses (whisper).",
+  "rules": [
+    ["^@TAG\\(\\s*", "\\1"],
+    ["\\s*\\)\\s*$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

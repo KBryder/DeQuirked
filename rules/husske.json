@@ -1,0 +1,10 @@
+{
+  "name": "husske",
+  "tags": ["Husske"],
+
+  "description": "Husske: lowercase + periods only; o->ø.",
+  "rules": [
+    ["ø", "o"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

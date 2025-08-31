@@ -1,0 +1,10 @@
+{
+  "name": "cinare",
+  "tags": ["Cinare"],
+  "description": "Cinare: C/Ç swap.",
+  "rules": [
+    ["ç", "c"],
+    ["Ç", "C"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "necron",
+  "tags": ["Necron"],
+  "description": "Necron : † prefix and suffix",
+  "rules": [
+    ["^@TAG†{1,}\\s*", "\\1"],
+    ["\\s*†{1,}\\s*$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

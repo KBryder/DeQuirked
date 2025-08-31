@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>dequirked — Homestuck/Vast Error Text Normalizer</title>
+<style>
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 1rem; line-height: 1.5; }
+  .grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+  @media (min-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+  textarea { width: 100%; min-height: 16rem; }
+  label { font-weight: 600; display:block; margin-bottom:.25rem; }
+  .toolbar { display:flex; gap:.5rem; align-items:center; flex-wrap: wrap; margin:.5rem 0; }
+  button { padding:.5rem .8rem; }
+  .sr-only { position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
+  details summary { cursor:pointer; }
+  table { width:100%; border-collapse: collapse; margin-top:.5rem; }
+  th, td { border-bottom: 1px solid #ddd; padding: .4rem .3rem; text-align:left; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>DeQuirked</h1>
+    <p>Paste quirked dialogue on the left. Get screen-reader-friendly text on the right. Auto-detects character style per line.</p>
+  </header>
+
+<div class="toolbar" role="group" aria-label="Options">
+  <label for="explicitProfile" class="sr-only">Optional profile override</label>
+  <select id="explicitProfile" name="explicitProfile">
+    <option value="">Auto detect (default)</option>
+    <!-- (The list will be auto-filled from /profiles) -->
+  </select>
+
+  <label for="chkCaps" style="margin-left:.5rem;">
+    <input type="checkbox" id="chkCaps" />
+    Normalize capitalization
+  </label>
+
+  <button id="translateBtn">Translate</button>
+  <button id="copyBtn">Copy Output</button>
+</div>
+
+
+  <div class="grid">
+    <div>
+      <label for="inputText">Input (quirked)</label>
+      <textarea id="inputText" aria-describedby="inputHelp"></textarea>
+      <div id="inputHelp">Tip: multi-speaker pages are fine—detection runs per line.</div>
+    </div>
+
+    <div>
+      <label for="outputText">Output (normalized)</label>
+      <textarea id="outputText" readonly aria-live="polite" aria-atomic="true"></textarea>
+
+      <details>
+        <summary>Show detected profiles per line</summary>
+        <table aria-describedby="detHelp">
+          <thead><tr><th>Line</th><th>Profile</th><th>Preview</th></tr></thead>
+          <tbody id="detBody"></tbody>
+        </table>
+        <div id="detHelp">Heuristic scoring chooses the most likely profile for each line.</div>
+      </details>
+    </div>
+  </div>
+
+  <div class="sr-only" id="liveRegion" aria-live="assertive" aria-atomic="true"></div>
+
+<script>
+const API_BASE = "";
+const API = "/translate";
+
+async function loadProfiles() {
+  try {
+    const res = await fetch("/profiles");
+    const data = await res.json();
+    const sel = document.getElementById('explicitProfile');
+    // clear old (keep the “auto” option)
+    [...sel.querySelectorAll('option:not([value=""])')].forEach(o => o.remove());
+    (data.profiles || []).forEach(p => {
+      const opt = document.createElement('option');
+      opt.value = p;
+      opt.textContent = p;
+      sel.appendChild(opt);
+    });
+  } catch {}
+}
+window.addEventListener('DOMContentLoaded', loadProfiles);
+
+const inputEl = document.getElementById('inputText');
+const outputEl = document.getElementById('outputText');
+const explicitEl = document.getElementById('explicitProfile');
+const liveEl = document.getElementById('liveRegion');
+const detBody = document.getElementById('detBody');
+
+async function doTranslate() {
+  const text = inputEl.value || "";
+  const explicit = explicitEl.value || null;
+  const caps = document.getElementById('chkCaps').checked; 
+
+  try {
+    const res = await fetch(API, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        text,
+        auto_detect: explicit === null || explicit === "",
+        profile: explicit || null,
+        normalize_caps: caps 
+      })
+    });
+    const data = await res.json();
+    outputEl.value = data.translated || "";
+    detBody.innerHTML = "";
+    (data.detected_profiles || []).forEach(row => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${row.line+1}</td><td>${row.profile ?? ''}</td><td>${row.output.slice(0,60)}</td>`;
+      detBody.appendChild(tr);
+    });
+    liveEl.textContent = "Translation complete.";
+  } catch (e) {
+    liveEl.textContent = "Translation failed. Check connection.";
+  }
+}
+
+document.getElementById('translateBtn').addEventListener('click', doTranslate);
+document.getElementById('copyBtn').addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(outputEl.value); liveEl.textContent = "Output copied."; }
+  catch { liveEl.textContent = "Copy failed."; }
+});
+</script>
+</body>
+</html>
+

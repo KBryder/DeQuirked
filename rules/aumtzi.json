@@ -1,0 +1,12 @@
+{
+  "name": "aumtzi",
+  "tags": ["OA", "Aumtzi"],
+  "description": "Aumtzi: brackets/parentheses circumfix; spaced-out last word.",
+  "rules": [
+    ["\\s*[\\]]$", ""],
+    ["^@TAG\\[\\s*", "\\1"],
+    ["^@TAG\\(\\s*", "\\1"],
+    ["\\s*\\)$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

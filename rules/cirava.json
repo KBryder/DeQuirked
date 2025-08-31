@@ -1,0 +1,7 @@
+{
+  "name": "cirava",
+  "tags": ["Cirava", "@STREAMS4SWEEPS"],
+  "description": "Cirava: (Phase I) no deterministic text subs.",
+  "rules": [],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

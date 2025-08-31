@@ -1,0 +1,7 @@
+{
+  "name": "pozzol",
+  "tags": ["Pozzol"],
+  "description": "Pozzol: every OTHER word capitalized.",
+  "rules": [],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

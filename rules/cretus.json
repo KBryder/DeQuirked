@@ -1,0 +1,10 @@
+{
+  "name": "cretus",
+  "tags": ["Cretus"],
+  "description": "Cretus: d->Δ, apostrophes -> '; lowercase except names.",
+  "rules": [
+    ["Δ", "d"],
+    ["(?<=\\w);(?=\\w)", "'"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

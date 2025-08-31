@@ -1,0 +1,9 @@
+{
+  "name": "fiamet",
+  "tags": ["Fiamet", "@q9xL1zTyLx4x"],
+  "description": "Fiamet: ~ before ! → just !",
+  "rules": [
+    ["~\\s*!", "!"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "kankri",
+  "tags": ["Kankri"],
+  "description": "Kankri: 6→B, 9→O when used as letters.",
+  "rules": [
+    ["(?i)(?<=\\w)6(?=\\w)", "b"],
+    ["(?i)(?<=\\w)9(?=\\w)", "o"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

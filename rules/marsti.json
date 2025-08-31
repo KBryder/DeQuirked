@@ -1,0 +1,9 @@
+{
+  "name": "marsti",
+  "tags": ["Marsti"],
+  "description": "Marsti: trailing -_- (or longer) face; no periods.",
+  "rules": [
+    ["\\s*-[_-]+-\\s*$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "zebruh",
+  "tags": ["Zebruh", "@THECODAKKEFFECT"],
+  "description": "Zebruh: quadrant symbol wrappers (♡♤♢♧).",
+  "rules": [
+    ["^[♡♤♢♧\\s]+", ""],
+    ["[♡♤♢♧\\s]+$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

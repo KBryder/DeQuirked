@@ -1,0 +1,11 @@
+{
+  "name": "mallek",
+  "tags": ["Mallek"],
+  "description": "Mallek: /= → isn't, = → is, & → and (word-bound).",
+  "rules": [
+    ["(?i)\\b/=?\\b", "isn't"],
+    ["(?i)\\b=\\b", "is"],
+    ["(?i)\\b&\\b", "and"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

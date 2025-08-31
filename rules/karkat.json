@@ -1,0 +1,12 @@
+{
+  "name": "karkat",
+  "tags": ["CG", "KARKAT"],
+  "description": "KARKAT: typically all-caps; keep casing but normalize numerals",
+  "rules": [
+    ["4", "a"],
+    ["3", "e"],
+    ["1", "l"],
+    ["0", "o"]
+  ],
+  "postprocessors": ["collapse_whitespace"]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "endari",
+  "tags": ["Endari"],
+  "description": "Endari: circumfix )-| ... |-(.",
+  "rules": [
+    ["^@TAG\\)\\-\\|\\s*", "\\1"],
+    ["\\s*\\|\\-\\(\\s*$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

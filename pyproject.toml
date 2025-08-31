@@ -1,0 +1,10 @@
+[project]
+name = "dequirked"
+version = "0.1.0"
+description = "Screen-reader friendly normalization for quirked webcomic text"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

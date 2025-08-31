@@ -1,0 +1,7 @@
+{
+  "name": "kanaya",
+  "tags": ["GA", "Kanaya"],
+  "description": "Kanaya: mostly standard.",
+  "rules": [],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

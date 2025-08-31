@@ -1,0 +1,10 @@
+{
+  "name": "skylla",
+  "tags": ["Skylla"],
+  "description": "Skylla: yy… → y.",
+  "rules": [
+    ["y{2,}", "y"],
+    ["Y{2,}", "Y"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "sabine",
+  "tags": ["Sabine"],
+
+  "description": "Sabine: ALL CAPS; volume slider like [-o-], [o--], [--o].",
+  "rules": [
+    ["^@TAG\\[[\\-o]{3}\\]\\s*", "\\1"],
+    ["^\\(\\s*", ""],
+    ["\\s*\\)$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

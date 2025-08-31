@@ -1,0 +1,10 @@
+{
+  "name": "valtel",
+  "tags": ["Valtel"],
+  "description": "Valtel: u->v, w->vv (reverse: vv->w then v->u).",
+  "rules": [
+    ["vv", "w"],
+    ["v", "u"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

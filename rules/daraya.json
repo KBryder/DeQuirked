@@ -1,0 +1,10 @@
+{
+  "name": "daraya",
+  "tags": ["Daraya"],
+  "description": "Daraya: ▲...▼ wrappers; multiples for emphasis.",
+  "rules": [
+    ["^@TAG▲+\\s*", "\\1"],
+    ["\\s*▼+\\s*$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

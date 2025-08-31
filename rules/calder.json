@@ -1,0 +1,7 @@
+{
+  "name": "calder",
+  "tags": ["GS", "Calder"],
+  "description": "Calder: no special quirk.",
+  "rules": [],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

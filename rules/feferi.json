@@ -1,0 +1,10 @@
+{
+  "name": "feferi",
+  "tags": ["CC", "Feferi"],
+  "description": "Feferi: )(→h; -E / --E...→E.",
+  "rules": [
+    ["\\)\\(", "h"],
+    ["-+E", "E"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

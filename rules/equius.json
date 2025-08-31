@@ -1,0 +1,12 @@
+{
+  "name": "equius",
+  "tags": ["CT", "Equius"],
+  "description": "Equius: prefix “D -->”; %→x; 100→loo; 001→ool.",
+  "rules": [
+    ["^@TAGD\\s*--\\>\\s*", "\\1"],
+    ["%", "x"],
+    ["(?i)\\b100\\b", "loo"],
+    ["(?i)\\b001\\b", "ool"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

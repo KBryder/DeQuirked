@@ -1,0 +1,10 @@
+{
+  "name": "gerbat",
+  "tags": ["Gerbat"],
+  "description": "Gerbat: pref/suff Г ... J",
+  "rules": [
+    ["^@TAGГ\\s*", "\\1"],
+    ["\\s*J\\s*$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

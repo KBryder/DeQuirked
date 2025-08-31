@@ -1,0 +1,9 @@
+{
+  "name": "meulin",
+  "tags": ["Meulin"],
+  "description": "Meulin: 33→ee (more catpuns later).",
+  "rules": [
+    ["33", "ee"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

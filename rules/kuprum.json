@@ -1,0 +1,9 @@
+{
+  "name": "kuprum",
+  "tags": ["Kuprum"],
+  "description": "Kuprum: leading > arrow.",
+  "rules": [
+    ["^@TAG>\\s*", "\\1"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

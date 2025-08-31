@@ -1,0 +1,10 @@
+{
+  "name": "mshiri",
+  "tags": ["Mshiri"],
+  "description": "Mshiri: no caps/punct; leading dots that grow.",
+  "rules": [
+    ["^@TAG\\.{1,}\\s*", "\\1"],
+    ["^\\.{1,}\\s*", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

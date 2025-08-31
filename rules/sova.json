@@ -1,0 +1,10 @@
+{
+  "name": "sova",
+  "tags": ["SA", "Sova"],
+  "description": "Sova: entire message in parentheses/italics; names all caps.",
+  "rules": [
+    ["^@TAG\\(\\s*", "\\1"],
+    ["\\s*\\)$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "charun",
+  "tags": ["Charun"],
+  "description": "Charun: first-letter caps; often ends with two periods.",
+  "rules": [
+    ["\\.\\.$", "."]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

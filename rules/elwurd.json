@@ -1,0 +1,9 @@
+{
+  "name": "elwurd",
+  "tags": ["Elwurd", "@seLLingUpphers"],
+  "description": "Elwurd: often 6× repeats; (safe) compress 6+ identical letters.",
+  "rules": [
+    ["([A-Za-z])\\1{5,}", "\\1"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

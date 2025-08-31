@@ -1,0 +1,10 @@
+{
+  "name": "cronus",
+  "tags": ["Cronus"],
+  "description": "Cronus: vw/wv blend → normalize w/v (best-effort).",
+  "rules": [
+    ["vw", "w"],
+    ["wv", "v"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

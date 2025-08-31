@@ -1,0 +1,13 @@
+{
+  "name": "terezi",
+  "tags": ["GC", "Terezi"],
+  "description": "Terezi numerals: 4->a, 3->e, 1->i, 0->o, 2->s; preserve punctuation and stage marks",
+  "rules": [
+    ["4", "a"],
+    ["3", "e"],
+    ["1", "i"],
+    ["0", "o"],
+    ["2", "s"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

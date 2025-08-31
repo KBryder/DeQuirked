@@ -1,0 +1,7 @@
+{
+  "name": "gamzee",
+  "tags": ["TC", "Gamzee"],
+  "description": "Gamzee: alternating caps / all-caps lines → sentence case.",
+  "rules": [],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

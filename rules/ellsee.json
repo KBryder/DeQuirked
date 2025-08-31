@@ -1,0 +1,11 @@
+{
+  "name": "ellsee",
+  "tags": ["EO", "Ellsee"],
+  "description": "Ellsee: E->Σ, ends with ¿¿ or ¡¡.",
+  "rules": [
+    ["Σ", "e"],
+    ["¿¿\\s*$", "?"],
+    ["¡¡\\s*$", "!"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

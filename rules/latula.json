@@ -1,0 +1,9 @@
+{
+  "name": "latula",
+  "tags": ["Latula"],
+  "description": "Latula: 4→a, 1→i, 3→e (base leet).",
+  "rules": [
+    ["4", "a"], ["1", "i"], ["3", "e"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

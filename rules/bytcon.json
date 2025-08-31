@@ -1,0 +1,10 @@
+{
+  "name": "bytcon",
+  "tags": ["Bytcon"],
+  "description": "Bytcon: 0-> (normal), 8-> (sales, ALL CAPS).",
+  "rules": [
+    ["^@TAG(?:0|8)->\\s*", "\\1"],
+    ["^(?:0|8)->\\s*", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

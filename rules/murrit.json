@@ -1,0 +1,11 @@
+{
+  "name": "murrit",
+  "tags": ["UK", "Murrit"],
+  "description": "Murrit: H→#, circumfix >([ ... ]",
+  "rules": [
+    ["^@TAG>\\(\\[\\s*", "\\1"],
+    ["\\s*]\\s*$", ""],
+    ["#", "h"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

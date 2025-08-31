@@ -1,0 +1,12 @@
+{
+  "name": "horuss",
+  "tags": ["Horuss"],
+  "description": "Horuss: %→x; 100/001 → loo/ool; strip emoticon + '<' prefix.",
+  "rules": [
+    ["^@TAG.*?<\\s*", "\\1"],
+    ["%", "x"],
+    ["(?i)\\b100\\b", "loo"],
+    ["(?i)\\b001\\b", "ool"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

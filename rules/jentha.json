@@ -1,0 +1,9 @@
+{
+  "name": "jentha",
+  "tags": ["FF", "Jentha"],
+  "description": "Jentha: initial word stutter 1–2 repeats.",
+  "rules": [
+    ["(?i)^(\\b\\w+\\b)(?:\\s+\\1){1,2}\\s+", "\\1 "]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

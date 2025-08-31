@@ -1,0 +1,12 @@
+{
+  "name": "diemen",
+  "tags": ["Diemen"],
+  "description": "Diemen: hot-dog buns |) ... (| (best-effort unwrap).",
+  "rules": [
+    ["^@TAG\\|\\)\\s*", "\\1"],
+    ["^@TAG\\(\\|\\s*", "\\1"],
+    ["\\s*\\(\\|\\s*$", ""],
+    ["\\s*\\|\\)\\s*$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

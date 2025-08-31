@@ -1,0 +1,10 @@
+{
+  "name": "eridan",
+  "tags": ["CA", "Eridan"],
+  "description": "Eridan: ww→w, vv→v; (syntax quirks left as-is).",
+  "rules": [
+    ["ww", "w"],
+    ["vv", "v"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

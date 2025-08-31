@@ -1,0 +1,9 @@
+{
+  "name": "chixie",
+  "tags": ["Chixie", "@chixie"],
+  "description": "Chixie: uses / as a clause separator.",
+  "rules": [
+    ["\\s*/\\s*", ", "]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

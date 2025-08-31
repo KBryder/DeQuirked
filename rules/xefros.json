@@ -1,0 +1,7 @@
+{
+  "name": "xefros",
+  "tags": ["Xefros", "@xXstickit2meXx"],
+  "description": "Xefros: quirky caps → sentence case; leave X alone.",
+  "rules": [],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

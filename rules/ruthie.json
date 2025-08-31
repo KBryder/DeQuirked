@@ -1,0 +1,10 @@
+{
+  "name": "ruthie",
+  "tags": ["Ruthie"],
+  "description": "Ruthie: eee… → e.",
+  "rules": [
+    ["e{3,}", "e"],
+    ["E{3,}", "E"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "laivan",
+  "tags": ["WA", "Laivan"],
+  "description": "Laivan: suffix '-'",
+  "rules": [
+    ["-+\\s*$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

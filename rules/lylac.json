@@ -1,0 +1,10 @@
+{
+  "name": "lylac",
+  "tags": ["GC", "Ly'lac", "Lylac", "Ly-lac"],
+  "description": "Ly'lac: bomb fuse line breaks o---*; fuse on (word)---*.",
+  "rules": [
+    ["o---\\*", ""],
+    ["\\)---\\*", ")"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

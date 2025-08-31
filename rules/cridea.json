@@ -1,0 +1,9 @@
+{
+  "name": "cridea",
+  "tags": ["Cridea", "@CrideaJeevik"],
+  "description": "Cridea: #Hashtags on ImportantWords → drop #.",
+  "rules": [
+    ["#(?=\\w)", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

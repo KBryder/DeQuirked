@@ -1,0 +1,10 @@
+{
+  "name": "azdaja",
+  "tags": ["Azdaja"],
+  "description": "Azdaja: wraps text with ||| ... |||.",
+  "rules": [
+    ["^@TAG\\|{3}\\s*", "\\1"],
+    ["\\s*\\|{3}\\s*$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

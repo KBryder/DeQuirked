@@ -1,0 +1,10 @@
+{
+  "name": "nihkee",
+  "tags": ["Nihkee"],
+  "description": "Nihkee: prefixes [()] championship belt.",
+  "rules": [
+    ["^@TAG\\[\\(\\)\\]\\s*", "\\1"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}
+

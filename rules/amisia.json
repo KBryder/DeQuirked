@@ -1,0 +1,10 @@
+{
+  "name": "amisia",
+  "tags": ["Amisia"],
+  "description": "Amisia: uu… → u.",
+  "rules": [
+    ["u{2,}", "u"],
+    ["U{2,}", "U"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

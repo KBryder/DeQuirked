@@ -1,0 +1,9 @@
+{
+  "name": "aradia",
+  "tags": ["AA", "Aradia"],
+  "description": "Aradia: 0→o (within words).",
+  "rules": [
+    ["(?i)(?<=\\w)0(?=\\w)", "o"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

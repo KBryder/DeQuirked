@@ -1,0 +1,9 @@
+{
+  "name": "mituna",
+  "tags": ["Mituna"],
+  "description": "Mituna: leetspeak back to letters.",
+  "rules": [
+    ["4", "a"], ["8", "b"], ["3", "e"], ["1", "i"], ["0", "o"], ["5", "s"], ["7", "t"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

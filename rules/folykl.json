@@ -1,0 +1,7 @@
+{
+  "name": "folykl",
+  "tags": ["Folykl"],
+  "description": "Folykl: removes unnecessary extra spaces.",
+  "rules": [],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

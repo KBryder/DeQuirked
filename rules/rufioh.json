@@ -1,0 +1,9 @@
+{
+  "name": "rufioh",
+  "tags": ["Rufioh"],
+  "description": "Rufioh: 1→i (in words); keep ellipses; don’t un-censor.",
+  "rules": [
+    ["(?i)(?<=\\w)1(?=\\w)", "i"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

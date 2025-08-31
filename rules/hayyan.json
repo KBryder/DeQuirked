@@ -1,0 +1,10 @@
+{
+  "name": "hayyan",
+  "tags": ["Hayyan"],
+  "description": "Hayyan: o->⨀ and adds '=' on words with ⨀.",
+  "rules": [
+    ["⨀", "o"],
+    ["=", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "raurou",
+  "tags": ["Raurou"],
+
+  "description": "Raurou: ALL CAPS; i->/.",
+  "rules": [
+    ["/", "i"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "serpaz",
+  "tags": ["PD", "Serpaz"],
+  "description": "Serpaz: font/emoticons; no text substitution.",
+  "rules": [],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

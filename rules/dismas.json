@@ -1,0 +1,11 @@
+{
+  "name": "dismas",
+  "tags": ["GD", "Dismas"],
+  "description": "Dismas: A->/\\, V->\\/, suffix ///",
+  "rules": [
+    ["/{3}\\s*$", ""],
+    ["\\\\/", "v"],
+    ["/\\\\", "a"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

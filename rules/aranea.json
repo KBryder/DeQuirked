@@ -1,0 +1,10 @@
+{
+  "name": "aranea",
+  "tags": ["Aranea"],
+  "description": "Aranea: 8→b in words; gr8→great when used.",
+  "rules": [
+    ["(?i)\\bgr8\\b", "great"],
+    ["(?i)(?<=\\w)8(?=\\w)", "b"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

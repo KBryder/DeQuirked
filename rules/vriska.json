@@ -1,0 +1,13 @@
+{
+  "name": "vriska",
+  "tags": ["AG", "Vriska"],
+  "description": "Vriska: 8→b in words; gr8→great; l8/r8 tweaks; 8r8k→break.",
+  "rules": [
+    ["(?i)\\bgr8\\b", "great"],
+    ["(?i)\\bl8\\b", "late"],
+    ["(?i)\\br8\\b", "rate"],
+    ["(?i)8r8k", "break"],
+    ["(?i)(?<=\\w)8(?=\\w)", "b"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

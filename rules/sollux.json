@@ -1,0 +1,15 @@
+{
+  "name": "sollux",
+  "tags": ["TA", "Sollux"],
+  "description": "Sollux: 2→s (inside words), ii→i, two→to; lol fixes.",
+  "rules": [
+    ["(?i)(?<=\\w)2(?=\\w)", "s"],
+    ["(?i)\\bii\\b", "i"],
+    ["(?i)(?<=\\w)ii(?=\\w)", "i"],
+    ["(?i)\\btwo\\b", "to"],
+    ["(?i)\\bolol\\b", "lol"],
+    ["(?i)l0l", "lol"],
+    ["(?i)(?<=\\w)0(?=\\w)", "o"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "turnin",
+  "tags": ["Turnin"],
+  "description": "Turnin: camera emoji prefix, slang (left as-is).",
+  "rules": [
+    ["^@TAG\\uD83D\\uDCF7\\s*", "\\1"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

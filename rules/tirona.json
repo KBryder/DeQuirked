@@ -1,0 +1,10 @@
+{
+  "name": "tirona",
+  "tags": ["Tirona"],
+  "description": "Tirona: 33 stands for e.",
+  "rules": [
+    ["33", "e"],
+    ["33", "e"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

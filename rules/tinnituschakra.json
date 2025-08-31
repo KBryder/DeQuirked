@@ -1,0 +1,10 @@
+{
+  "name": "tinnituschakra",
+  "tags": ["TC", "tinnitusChakra"],
+  "description": "tinnitusChakra: o/O→ø/Ø (normalize back).",
+  "rules": [
+    ["ø", "o"],
+    ["Ø", "O"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

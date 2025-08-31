@@ -1,0 +1,9 @@
+{
+  "name": "vrissy",
+  "tags": ["AG", "Vrissy"],
+  "description": "Vrissy: 8→b (in words) like Vriska.",
+  "rules": [
+    ["(?i)(?<=\\w)8(?=\\w)", "b"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

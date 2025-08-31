@@ -1,0 +1,7 @@
+{
+  "name": "calliope",
+  "tags": ["UU", "Calliope"],
+  "description": "Calliope: odd caps → sentence case; keep U’s as-is.",
+  "rules": [],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

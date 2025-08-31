@@ -1,0 +1,10 @@
+{
+  "name": "cliper",
+  "tags": ["Cliper"],
+  "description": "Cliper: begins/ends with ⁂ … ⁂.",
+  "rules": [
+    ["^@TAG\\u2042\\s*", "\\1"],
+    ["\\s*\\u2042\\s*$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

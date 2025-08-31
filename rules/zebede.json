@@ -1,0 +1,10 @@
+{
+  "name": "zebede",
+  "tags": ["Zebede"],
+  "description": "Zebede: word-final z→s.",
+  "rules": [
+    ["z\\b", "s"],
+    ["Z\\b", "S"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

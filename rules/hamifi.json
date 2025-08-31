@@ -1,0 +1,9 @@
+{
+  "name": "hamifi",
+  "tags": ["OD", "Hamifi"],
+  "description": "Hamifi: suffix ∞",
+  "rules": [
+    ["\\s*∞+$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "generic_leet",
+  "description": "Common leetspeak-style quirks",
+  "rules": [
+    ["\\)\\(", "h"],
+    ["\\(\\)", "o"],
+    ["8D", "b"],
+    ["\\$", "s"],
+    ["4", "a"],
+    ["3", "e"],
+    ["1", "l"],
+    ["0", "o"],
+    ["7", "t"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

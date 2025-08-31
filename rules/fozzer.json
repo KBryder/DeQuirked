@@ -1,0 +1,9 @@
+{
+  "name": "fozzer",
+  "tags": ["Fozzer"],
+  "description": "Fozzer: underscores as spaces.",
+  "rules": [
+    ["_", " "]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

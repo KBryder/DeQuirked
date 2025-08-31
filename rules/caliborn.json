@@ -1,0 +1,7 @@
+{
+  "name": "caliborn",
+  "tags": ["uu", "Caliborn"],
+  "description": "Caliborn: all caps (except u) → sentence case.",
+  "rules": [],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

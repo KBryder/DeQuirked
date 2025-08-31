@@ -1,0 +1,9 @@
+{
+  "name": "cadlys",
+  "tags": ["Cadlys"],
+  "description": "Cadlys: strike-through combining marks; serious = ALL CAPS.",
+  "rules": [
+    ["\\u0336", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

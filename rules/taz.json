@@ -1,0 +1,11 @@
+{
+  "name": "taz",
+  "tags": ["PO", "Taz"],
+  "description": "Taz: T->+, message wrapped in ~ ... ~",
+  "rules": [
+    ["^@TAG~+\\s*", "\\1"],
+    ["\\s*~+$", ""],
+    ["\\+", "t"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

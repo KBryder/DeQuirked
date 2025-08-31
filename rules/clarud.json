@@ -1,0 +1,9 @@
+{
+  "name": "clarud",
+  "tags": ["Clarud"],
+  "description": "Clarud: prefix ☊",
+  "rules": [
+    ["^@TAG☊\\s*", "\\1"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

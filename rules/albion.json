@@ -1,0 +1,11 @@
+{
+  "name": "albion",
+  "tags": ["DQ", "Albion"],
+  "description": "Albion: replaces spaces with *; wrapped in *",
+  "rules": [
+    ["^@TAG\\*+\\s*", "\\1"],
+    ["\\s*\\*+$", ""],
+    ["\\*", " "]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

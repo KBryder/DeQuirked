@@ -1,0 +1,10 @@
+{
+  "name": "ardata",
+  "tags": ["Ardata"],
+  "description": "Ardata: iii… → i.",
+  "rules": [
+    ["i{3,}", "i"],
+    ["I{3,}", "I"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

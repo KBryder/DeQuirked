@@ -1,0 +1,9 @@
+{
+  "name": "sestro",
+  "tags": ["Sestro"],
+  "description": "Sestro: prefix ∞",
+  "rules": [
+    ["^@TAG∞\\s*", "\\1"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "racren",
+  "tags": ["Racren"],
+
+  "description": "Racren: circumfix { ... }, emphasis <- ... ->",
+  "rules": [
+    ["^@TAG\\{\\s*", "\\1"],
+    ["\\s*\\}$", ""],
+    ["<-\\s*(.+?)\\s*->", "\\1"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

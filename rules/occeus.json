@@ -1,0 +1,10 @@
+{
+  "name": "occeus",
+  "tags": ["ME", "Occeus"],
+  "description": "Occeus: .o. and .O. for o/O; pronoun I -> eye.",
+  "rules": [
+    ["(?i)\\.o\\.", "o"],
+    ["(?i)\\beye\\b", "I"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

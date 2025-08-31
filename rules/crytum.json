@@ -1,0 +1,10 @@
+{
+  "name": "crytum",
+  "tags": ["Crytum"],
+  "description": "Crytum: quotes prefixed with O> and suffixed with ‿.",
+  "rules": [
+    ["^@TAGO>\\s*", "\\1"],
+    ["\\s*‿\\s*$", ""]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

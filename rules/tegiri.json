@@ -1,0 +1,9 @@
+{
+  "name": "tegiri",
+  "tags": ["Tegiri"],
+  "description": "Tegiri: '/' was used for 'l' → restore l.",
+  "rules": [
+    ["/", "l"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

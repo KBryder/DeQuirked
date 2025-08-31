@@ -1,0 +1,7 @@
+{
+  "name": "damara",
+  "tags": ["Damara"],
+  "description": "Damara: normalize punctuation; sentence case.",
+  "rules": [],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

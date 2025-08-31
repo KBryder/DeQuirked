@@ -1,0 +1,10 @@
+{
+  "name": "polypa",
+  "tags": ["Polypa"],
+  "description": "Polypa: clause * separators, end *|",
+  "rules": [
+    ["\\s*\\*\\|\\s*$", ""],
+    ["\\s*\\*\\s*", " "]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "trizza",
+  "tags": ["Trizza", "@realTrizzaTethis"],
+  "description": "Trizza: ψ stands for w.",
+  "rules": [
+    ["ψ", "w"],
+    ["Ψ", "W"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

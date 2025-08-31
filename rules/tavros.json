@@ -1,0 +1,7 @@
+{
+  "name": "tavros",
+  "tags": ["AT", "Tavros"],
+  "description": "Tavros: inverted/messy caps → sentence case.",
+  "rules": [],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}

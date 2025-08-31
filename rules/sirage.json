@@ -1,0 +1,11 @@
+{
+  "name": "sirage",
+  "tags": ["RM", "Sirage"],
+  "description": "Sirage: prefix '<' and suffix '>~'; c->< inside.",
+  "rules": [
+    ["^@TAG<\\s*", "\\1"],
+    ["\\s*>~\\s*$", ""],
+    ["<", "c"]
+  ],
+  "postprocessors": ["collapse_whitespace", "nfkc"]
+}
